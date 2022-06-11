@@ -1,0 +1,18 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: black;
+  margin: 50px;
+  text-align: center;
+}
+
+.top {
+  margin: 20px;
+  text-align: center;
+}
+
+.lyrics {
+  text-align: center;
+}
