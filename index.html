@@ -44,14 +44,16 @@
       <p>Headlines, deadlines jammin' your mind</p>
       <p>You been stealin' shots from the side</p>
       <p>Let your feelin's go for a ride</p><br><br>
-    </s>
-  </div>
-  <div class="buttons">
-    <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('demo').innerHTML = Date()">Get the Date+Time</button>
+    </div>
   </div>
   <div class="text">
     <p id="demo"></p>
   </div>
+  <div class="buttons">
+    <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('demo').innerHTML = Date();">Get the Date</button>
+      <button type="button" class="btn btn-outline-primary" onclick="changeColor('demo','red');">Change Text Color</button>
+  </div>
+  <script src="index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 
