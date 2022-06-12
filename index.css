@@ -5,6 +5,14 @@
 
 .lyrics {
   text-align: center;
-  text-shadow: 1px, 1px, 5px, red;
 }
 
+.buttons {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 20px;
+}
