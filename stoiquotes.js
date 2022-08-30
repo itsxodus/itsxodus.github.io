@@ -1,6 +1,6 @@
 function loadQuote(id) {
   
-  const API_URL = 'https://uselessfacts.jsph.pl/random.json?language=en';
+  const API_URL = 'https://stoicquotesapi.com/v1/api/quotes/random';
   const elem = document.getElementById(id);
   
   fetch(API_URL, {
@@ -15,7 +15,9 @@ function loadQuote(id) {
   })
   .then((data) => {
     // Work with JSON data here
-    elem.innerHTML = JSON.stringify(data);
+    const x = JSON.stringify(data);
+    const y = JSON.parse(data);
+    elem.innerHTML = y.body;
     console.log(data)
   })
   .catch((err) => {
