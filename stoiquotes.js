@@ -5,6 +5,8 @@ function loadQuote(id) {
   
   fetch(API_URL, {
     mode: "no-cors",
+    method: "GET",
+    headers: {"Content-type": "application/json;charset=UTF-8"}
   })
   .then((response) => {
     return response.json()
@@ -16,6 +18,7 @@ function loadQuote(id) {
   })
   .catch((err) => {
     // Do something for an error here
+    console.log('Request Failed');
   })
   
 }
