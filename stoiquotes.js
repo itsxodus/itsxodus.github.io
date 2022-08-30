@@ -3,7 +3,9 @@ function loadQuote(id) {
   const API_URL = 'https://api.themotivate365.com/stoic-quote';
   const elem = document.getElementById('id');
   
-  fetch(API_URL)
+  fetch(API_URL, {
+    mode: "no-cors",
+  })
   .then((response) => {
     return response.json()
   })
