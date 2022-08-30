@@ -18,7 +18,5 @@ function loadQuote(id) {
   })
   .catch((err) => {
     // Do something for an error here
-    console.log('Request Failed');
   })
-  
 }
