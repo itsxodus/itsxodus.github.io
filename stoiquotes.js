@@ -6,7 +6,7 @@ function loadQuote(id) {
   fetch(API_URL, {
     method: "GET",
     headers: {
-      "Content-type": "application/json;charset=UTF-8"
+      "Content-type": "application/json;charset=UTF-8",
       'Accept': 'application/json',
     }
   })
