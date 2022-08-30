@@ -4,7 +4,6 @@ function loadQuote(id) {
   const elem = document.getElementById('id');
   
   fetch(API_URL, {
-    mode: "no-cors",
     method: "GET",
     headers: {"Content-type": "application/json;charset=UTF-8"}
   })
