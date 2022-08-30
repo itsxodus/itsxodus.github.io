@@ -3,3 +3,4 @@
 Currently a work in progress...
 
 Visit page at: https://itsxodus.github.io
+Stoiquotes URL: https://itsxodus.github.io/stoiquotes
