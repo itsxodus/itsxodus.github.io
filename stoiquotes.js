@@ -5,14 +5,17 @@ function loadQuote(id) {
   
   fetch(API_URL, {
     method: "GET",
-    headers: {"Content-type": "application/json;charset=UTF-8"}
+    headers: {
+      "Content-type": "application/json;charset=UTF-8"
+      'Accept': 'application/json',
+    }
   })
   .then((response) => {
     return response.json()
   })
   .then((data) => {
     // Work with JSON data here
-    elem.innerHTML = data;
+    elem.innerHTML = data[0].quote;
     console.log(data)
   })
   .catch((err) => {
