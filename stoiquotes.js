@@ -1,3 +1,4 @@
 function loadQuote() {
-  document.getElementById('quoteText').InnerHTML = "test quote";
+  const elem = document.getElementById(id);
+  elem.InnerHTML = "test quote";
 }
