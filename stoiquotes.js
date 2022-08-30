@@ -1,7 +1,7 @@
 function loadQuote(id) {
   
   const API_URL = 'https://uselessfacts.jsph.pl/random.json?language=en';
-  const elem = document.getElementById('id');
+  const elem = document.getElementById(id);
   
   fetch(API_URL, {
     method: "GET",
