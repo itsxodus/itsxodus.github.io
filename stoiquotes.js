@@ -1,6 +1,6 @@
 function loadQuote(id) {
   
-  const API_URL = 'https://api.themotivate365.com/stoic-quote';
+  const API_URL = 'https://uselessfacts.jsph.pl/random.json?language=en';
   const elem = document.getElementById('id');
   
   fetch(API_URL, {
@@ -15,7 +15,7 @@ function loadQuote(id) {
   })
   .then((data) => {
     // Work with JSON data here
-    elem.innerHTML = data[0].quote;
+    elem.innerHTML = data;
     console.log(data)
   })
   .catch((err) => {
