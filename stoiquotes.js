@@ -16,7 +16,8 @@ function loadQuote(id) {
   .then((data) => {
     // Work with JSON data here
     const x = JSON.stringify(data);
-    elem.innerHTML = x;
+    const y = JSON.parse(x);
+    elem.innerHTML = "\"" + y.body + "\"" + " - " + y.author;
     console.log(data)
   })
   .catch((err) => {
