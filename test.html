@@ -1,4 +1,31 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<!DOCTYPE html>
+<html>
+<head>
+<title>Font Awesome Icons Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
 
-<i id="icon" class="fas fa-spinner fa-spin"></i>
-<input id="animation-speed-input" type="range" min="1" max="5" value="3">
+<p>Speed:</p>
+<div class="slider-container">
+  <input type="range" min="1" max="10" value="1" class="slider" id="animation-speed">
+</div>
+
+<p>Spinning (Once every <h id="bpm">70</h> second(s)):</p>
+<i class="fa fa-spinner fa-spin" id="animated-icon"></i>
+
+
+<script>
+  var slider = document.getElementById("animation-speed");
+  var icon = document.getElementById("animated-icon");
+  var text = document.getElementById("bpm");
+
+  slider.oninput = function() {
+  	text.innerHTML = (slider.max - this.value);
+    icon.style.animationDuration = (slider.max - this.value) + "s";
+  }
+</script>
+
+</body>
+</html> 
