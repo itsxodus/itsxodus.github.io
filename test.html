@@ -9,7 +9,7 @@
 
 <p>Speed:</p>
 <div class="slider-container">
-  <input type="range" min="1" max="10" value="1" class="slider" id="animation-speed">
+  <input type="range" min="1" max="1000" value="750" class="slider" id="animation-speed">
 </div>
 
 <p>Spinning (Once every <h id="bpm">2.5</h> second(s)):</p>
@@ -22,8 +22,8 @@
   var text = document.getElementById("bpm");
 
   slider.oninput = function() {
-  	text.innerHTML = (slider.max - this.value);
-    icon.style.animationDuration = (slider.max - this.value) + "s";
+  	text.innerHTML = ((slider.max/100) - (this.value/100));
+    icon.style.animationDuration = ((slider.max/100) - (this.value/100)) + "s";
   }
 </script>
 
