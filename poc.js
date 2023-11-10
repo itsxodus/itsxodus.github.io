@@ -13,7 +13,6 @@ async function base64ImageData(imageUrl) {
         console.error('Error converting image to base64:', error);
         return null;
     }
-  }
 }
 
 function getImageData () {
