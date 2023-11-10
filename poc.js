@@ -1,13 +1,3 @@
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
 async function base64ImageData(imageUrl) {
   try {
     const response = await fetch(imageUrl);
@@ -25,19 +15,27 @@ async function base64ImageData(imageUrl) {
    }
 }
 
-function getImageData(checkOnlyVisible = 1) {
-  const images = document.querySelectorAll('img');
-  const visibleImages = Array.from(images).filter(isInViewport);
-  let base64ImageDataArray = [];
-  let imagesToCheck = [];
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
+function getImageData(checkOnlyVisible = 1) {
+  const allImages = document.querySelectorAll('img');
   switch (checkOnlyVisible) {
     case 0:
-      imagesToCheck = images;
+      const imagesToCheck = allImages;
       break;
     default:
-      imagesToCheck = visibleImages;
+      const imagesToCheck = Array.from(allImages).filter(isInViewport);
   }
+  
+  let base64ImageDataArray = [];
   
   imagesToCheck.forEach((image, index) => {
     base64ImageData(image.src).then(base64Data => {
