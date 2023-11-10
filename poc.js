@@ -27,12 +27,13 @@ function isInViewport(element) {
 
 function getImageData(checkOnlyVisible = 1) {
   const allImages = document.querySelectorAll('img');
+  let imagesToCheck = [];
   switch (checkOnlyVisible) {
     case 0:
-      const imagesToCheck = allImages;
+      imagesToCheck = allImages;
       break;
     default:
-      const imagesToCheck = Array.from(allImages).filter(isInViewport);
+      imagesToCheck = Array.from(allImages).filter(isInViewport);
   }
   
   let base64ImageDataArray = [];
