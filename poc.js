@@ -23,9 +23,9 @@ function getImageData () {
     base64ImageData(image.src).then(base64Data => {
         if (base64Data) {
             base64ImageDataArray.push(base64Data);
-            console.log(`Image ${index + 1}: ${image.src}, (${base64Data})`);
+            console.log(`Image ${index + 1}: ${image.src}, (Base 64 data added to array.)`);
         } else {
-            console.log(`Image ${index + 1}: ${image.src}, (Failed to convert image to base64.)`);
+            console.log(`Image ${index + 1}: ${image.src}, (Failed to convert image to Base 64.)`);
         }
     });
   });
